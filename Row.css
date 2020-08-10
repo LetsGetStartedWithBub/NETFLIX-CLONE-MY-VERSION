@@ -1,0 +1,37 @@
+.row {
+/* 20px away from left margin*/
+    margin-left : 20px;
+    color: white;
+}
+.row_posters {
+/*flex is for horizontal representation
+overflow-y is hidden because we don't need horizontal scroll bar
+padding is for crop-less hover*/
+    display:flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+.row_posters::-webkit-scrollbar{
+/*scrollbar won't be visisble*/
+    display: none;
+}
+.row_poster {
+/*transition is to slow down the effect by 450ms*/
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row_poster:hover {
+    transform: scale(1.08);
+}
+.row_posterLarge {
+/*posterLarge is for Netflix Originals representation*/
+    max-height : 250px;
+}
+.row_posterLarge:hover{
+    transform : scale(1.09);
+}
